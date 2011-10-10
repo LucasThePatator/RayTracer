@@ -1,0 +1,36 @@
+﻿La génération a démarré 10/10/2011 01:21:25.
+     1>Projet "C:\Users\Patator\documents\visual studio 2010\Projects\RayTracer\RayTracing\RayTracing.vcxproj" sur le nœud 2 (build cible(s)).
+     1>InitializeBuildStatus:
+         Création de "Debug\RayTracing.unsuccessfulbuild", car "AlwaysCreate" a été spécifié.
+       ClCompile:
+         Toutes les sorties sont à jour.
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I"C:\Users\Patator\Documents\Geeking\SDL-1.2.14\include" /I"C:\Users\Patator\Documents\Geeking\MTL-4.0.8591-Linux\usr\include\boost\numeric\mtl" /I"C:\Users\Patator\documents\visual studio 2010\Projects\RayTracer\\BasicALgebra" /IC:\Users\Patator\Documents\Geeking\boost_1_47_0 /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"Debug\RayTracing.pch" /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt RayTracing.cpp
+         RayTracing.cpp
+     1>c:\users\patator\documents\visual studio 2010\projects\raytracer\raytracing\raytracer.h(1): warning C4068: pragma inconnu
+       ManifestResourceCompile:
+         Toutes les sorties sont à jour.
+       Link:
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Patator\documents\visual studio 2010\Projects\RayTracer\Debug\RayTracing.exe" /INCREMENTAL /NOLOGO /LIBPATH:"C:\Users\Patator\Documents\Geeking\SDL-1.2.14\lib" /LIBPATH:"C:\Users\Patator\documents\visual studio 2010\Projects\RayTracer\Debug" SDL.lib SDLmain.lib BasicAlgebra.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\RayTracing.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\Patator\documents\visual studio 2010\Projects\RayTracer\Debug\RayTracing.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Patator\documents\visual studio 2010\Projects\RayTracer\Debug\RayTracing.lib" /MACHINE:X86 Debug\RayTracing.exe.embed.manifest.res
+         Debug\camera.obj
+         Debug\InfinitePlan.obj
+         Debug\Light.obj
+         Debug\Ray.obj
+         Debug\RayTracer.obj
+         Debug\RayTracing.obj
+         Debug\SimpleScene.obj
+         Debug\Sphere.obj
+         Debug\stdafx.obj
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"Debug\RayTracing.exe.embed.manifest" /manifest Debug\RayTracing.exe.intermediate.manifest
+         Toutes les sorties sont à jour.
+       LinkEmbedManifest:
+         Toutes les sorties sont à jour.
+         RayTracing.vcxproj -> C:\Users\Patator\documents\visual studio 2010\Projects\RayTracer\Debug\RayTracing.exe
+       FinalizeBuildStatus:
+         Suppression du fichier "Debug\RayTracing.unsuccessfulbuild".
+         Mise à jour de l'horodatage "Debug\RayTracing.lastbuildstate".
+     1>Génération du projet "C:\Users\Patator\documents\visual studio 2010\Projects\RayTracer\RayTracing\RayTracing.vcxproj" terminée (build cible(s)).
+
+La génération a réussi.
+
+Temps écoulé 00:00:00.71
