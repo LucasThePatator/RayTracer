@@ -1,0 +1,20 @@
+﻿La génération a démarré 10/10/2011 01:15:01.
+     1>Projet "C:\Users\Patator\documents\visual studio 2010\Projects\RayTracer\BasicAlgebra\BasicAlgebra.vcxproj" sur le nœud 2 (rebuild cible(s)).
+     1>_PrepareForClean:
+         Suppression du fichier "Debug\BasicAlgebra.lastbuildstate".
+       InitializeBuildStatus:
+         Création de "Debug\BasicAlgebra.unsuccessfulbuild", car "AlwaysCreate" a été spécifié.
+       ClCompile:
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _USRDLL /D BASICALGEBRA_EXPORTS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt BasicAlgebra.cpp
+         BasicAlgebra.cpp
+       Lib:
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\Lib.exe /OUT:"C:\Users\Patator\documents\visual studio 2010\Projects\RayTracer\Debug\BasicAlgebra.lib" /NOLOGO Debug\BasicAlgebra.obj
+         BasicAlgebra.vcxproj -> C:\Users\Patator\documents\visual studio 2010\Projects\RayTracer\Debug\BasicAlgebra.lib
+       FinalizeBuildStatus:
+         Suppression du fichier "Debug\BasicAlgebra.unsuccessfulbuild".
+         Mise à jour de l'horodatage "Debug\BasicAlgebra.lastbuildstate".
+     1>Génération du projet "C:\Users\Patator\documents\visual studio 2010\Projects\RayTracer\BasicAlgebra\BasicAlgebra.vcxproj" terminée (rebuild cible(s)).
+
+La génération a réussi.
+
+Temps écoulé 00:00:00.22
