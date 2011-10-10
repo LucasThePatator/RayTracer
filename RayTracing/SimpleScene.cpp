@@ -2,6 +2,7 @@
 #include "SimpleScene.h"
 
 #include <algorithm>
+#include <cmath>
 
 SimpleScene::SimpleScene(void)
 {
@@ -110,16 +111,20 @@ Color3d SimpleScene::computeColor(Point3d point, MaterialPoint caracteristics) {
 		if(testCollision(ray, pathSize))
 			continue;
 
+
+		/* Gestion de la reflexion */
 		//sinon on calcul le produit scalaire entre la normale au point et le chemin
 		double cosphi = path * caracteristics.normal;
+		double spec = 1 * pow(cosphi, 20);
 		if (cosphi < 0) //On est dans le mauvais sens
 			continue;
 		
 		//Sinon on ajoute a la couleur la couleur de la source lumineuse en fonction du produit scalaire
 		
-		Color3d t_color =  cosphi * dot(light->getColor(),caracteristics.color);
+		Color3d t_color =  (1 + spec) * cosphi * dot(light->getColor(),caracteristics.color);
 		color = t_color + color;
-		Color3d nulColor(0);
+
+		/* Gestion de la refraction */
 
 	}
 

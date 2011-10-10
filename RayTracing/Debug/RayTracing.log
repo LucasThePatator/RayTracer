@@ -1,12 +1,17 @@
-﻿La génération a démarré 10/10/2011 01:21:25.
+﻿La génération a démarré 10/10/2011 13:47:07.
      1>Projet "C:\Users\Patator\documents\visual studio 2010\Projects\RayTracer\RayTracing\RayTracing.vcxproj" sur le nœud 2 (build cible(s)).
      1>InitializeBuildStatus:
          Création de "Debug\RayTracing.unsuccessfulbuild", car "AlwaysCreate" a été spécifié.
        ClCompile:
          Toutes les sorties sont à jour.
-         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I"C:\Users\Patator\Documents\Geeking\SDL-1.2.14\include" /I"C:\Users\Patator\Documents\Geeking\MTL-4.0.8591-Linux\usr\include\boost\numeric\mtl" /I"C:\Users\Patator\documents\visual studio 2010\Projects\RayTracer\\BasicALgebra" /IC:\Users\Patator\Documents\Geeking\boost_1_47_0 /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"Debug\RayTracing.pch" /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt RayTracing.cpp
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I"C:\Users\Patator\Documents\Geeking\SDL-1.2.14\include" /I"C:\Users\Patator\Documents\Geeking\MTL-4.0.8591-Linux\usr\include\boost\numeric\mtl" /I"C:\Users\Patator\documents\visual studio 2010\Projects\RayTracer\\BasicALgebra" /IC:\Users\Patator\Documents\Geeking\boost_1_47_0 /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"Debug\RayTracing.pch" /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt RayTracer.cpp RayTracing.cpp
          RayTracing.cpp
      1>c:\users\patator\documents\visual studio 2010\projects\raytracer\raytracing\raytracer.h(1): warning C4068: pragma inconnu
+         RayTracer.cpp
+     1>c:\users\patator\documents\visual studio 2010\projects\raytracer\raytracing\raytracer.h(1): warning C4068: pragma inconnu
+     1>c:\users\patator\documents\visual studio 2010\projects\raytracer\raytracing\raytracer.cpp(61): warning C4101: 'dist' : variable locale non référencée
+     1>c:\users\patator\documents\visual studio 2010\projects\raytracer\raytracing\raytracer.cpp(88): warning C4018: '<' : incompatibilité signed/unsigned
+         Génération de code en cours...
        ManifestResourceCompile:
          Toutes les sorties sont à jour.
        Link:
@@ -14,6 +19,7 @@
          Debug\camera.obj
          Debug\InfinitePlan.obj
          Debug\Light.obj
+         Debug\Material.obj
          Debug\Ray.obj
          Debug\RayTracer.obj
          Debug\RayTracing.obj
@@ -33,4 +39,4 @@
 
 La génération a réussi.
 
-Temps écoulé 00:00:00.71
+Temps écoulé 00:00:00.85

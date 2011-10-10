@@ -45,11 +45,20 @@ bool Sphere::computeColorNormal(const Ray& ray, double dist, MaterialPoint &cara
 	caracteristics.color = this->color;
 	caracteristics.reflect = 0.7;
 
+	caracteristics.refractIndex = 1.5;
+	caracteristics.refractAbs = 1;
+
 	return true;
 }
 
 bool Sphere::setColor(Color3d &color) {
 	this->color = color;
+	return true;
+}
+
+bool Sphere::setMaterial(const Material &material) 
+{
+	this->material = material;
 	return true;
 }
 

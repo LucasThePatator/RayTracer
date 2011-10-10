@@ -75,13 +75,13 @@ int _tmain(int argc, _TCHAR* argv[])
 	
 	//Sphere rouge
 	Point3d center2;
-	center2[0] = 5 + 0.5;
+	center2[0] = 3 + 0.5;
 	center2[1] = 0;
 	center2[2] = 0.5;
 	Sphere s2(center2, 0.5);
 
 	Color3d color2(0);
-	color2[0] = 1;
+	color2[0] = 0;
 	s2.setColor(color2);
 	scene.addPrimitive(s2);
 
@@ -97,10 +97,23 @@ int _tmain(int argc, _TCHAR* argv[])
 	s3.setColor(color3);
 	scene.addPrimitive(s3);
 
+	//Sphere blanche
+	Point3d center4;
+	center4[0] = 12;
+	center4[1] = 0;
+	center4[2] = 0.5;
+	Sphere s4(center4, 0.25);
+
+	Color3d color4(1);
+	color4[2] = 1;
+	s4.setColor(color4);
+	scene.addPrimitive(s4);
+
+
 	////Plan blanc
 	//Vector3d normal1(0);
 	//normal1[0] = -1;
-	Color3d white(1);
+	Color3d white(0);
 	//Point3d pt1(0);
 	//pt1[0] = 10;
 	//pt1[1] = 0;
@@ -130,7 +143,7 @@ int _tmain(int argc, _TCHAR* argv[])
 	Point3d lightPosition2(0);
 	Color3d lightColor(1);
 	
-	lightPosition1[0] = 5;
+	lightPosition1[0] = 15;
 	lightPosition1[1] = -3;
 	lightPosition1[2] = 5;
 
@@ -156,8 +169,13 @@ int _tmain(int argc, _TCHAR* argv[])
 	SDL_Event event;
 
 	SDL_WaitEvent(&event);
-	while(event.type != SDL_KEYDOWN)
+	bool continuer = true;
+	while(continuer) 
+	{
 		SDL_WaitEvent(&event);
+		if(event.key.keysym.sym == SDLK_ESCAPE)
+			continuer = false;
+	}
 
 	return 0;
 }

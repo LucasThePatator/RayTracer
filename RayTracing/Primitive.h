@@ -3,6 +3,8 @@
 #include "commons.h"
 #include "Ray.h"
 
+#include "Material.h"
+
 typedef struct
 {
 	/// Normale de la primitive en un point
@@ -11,6 +13,10 @@ typedef struct
 	Color3d color;
 	/// "Couleur" de la réflexion
 	Color3d reflect;
+	/// Indice(s) de refraction
+	double refractIndex;
+	/// Indice(s) d'absorption pour la refraction
+	double refractAbs;
 
 } MaterialPoint;
 
@@ -25,6 +31,8 @@ public:
 	virtual bool computeColorNormal(const Ray& ray, double dist, MaterialPoint &caracteristics) = 0;
 
 	virtual bool setColor(Color3d &color) = 0;
+
+	virtual bool setMaterial(const Material &material) = 0;
 };
 
 
