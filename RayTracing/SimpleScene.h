@@ -15,12 +15,13 @@ public:
 	Primitive * removePrimitive(int index);
 	Primitive * getPrimitive(int index);
 
+	int getNbPrimitives();
+
 	bool addLight(Light &primitive);
 	Light * removeLight(int index);
+	Light * getLight(int index);
 
-	int getFirstCollision(const Ray& ray, double& dist);
-	bool testCollision(const Ray& ray, double dist);
-	Color3d computeColor(Point3d point, MaterialPoint caracteristics);
+	int getNbLights();
 
 private :
 

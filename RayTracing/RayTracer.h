@@ -1,4 +1,4 @@
-#pragma onc
+#pragma once
 
 #include "SimpleScene.h"
 #include "commons.h"
@@ -18,7 +18,7 @@ public:
 
 private :
 	void generateRay(int x, int y, Ray& ray) const;
-	void computeColor(const Ray& ray, Color3d& color, unsigned int level) const;
+	void RayTrace(const Ray& ray, Color3d& color, unsigned int level) const;
 
 	SimpleScene *scene;
 	double pixelWidth, pixelHeight, focale; //Taille des pixels en unité de mesure et distance focale

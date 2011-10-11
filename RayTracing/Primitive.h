@@ -26,13 +26,17 @@ public:
 	Primitive(void) {};
 	virtual ~Primitive(void) {};
 
-	virtual bool intersect(const Ray &ray, double &dist) = 0;
+	virtual int intersect(const Ray &ray, double &dist) = 0;
 
-	virtual bool computeColorNormal(const Ray& ray, double dist, MaterialPoint &caracteristics) = 0;
+	virtual bool getPoint(const Ray& ray, double dist, MaterialPoint &caracteristics) = 0;
 
 	virtual bool setColor(Color3d &color) = 0;
 
-	virtual bool setMaterial(const Material &material) = 0;
+	void setMaterial(const Material &material) {this->material = material;};
+	const Material &getMaterial() const {return material;}
+
+private :
+	Material material;
 };
 
 

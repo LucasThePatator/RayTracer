@@ -18,20 +18,24 @@ InfinitePlan::~InfinitePlan(void)
 	
 }
 
-bool InfinitePlan::intersect(const Ray &ray, double &dist) 
+int InfinitePlan::intersect(const Ray &ray, double &dist) 
 {
-	if (ray.getDirection() * normal == 0)
+	double scal = ray.getDirection() * normal;
+	if (scal == 0)
 		return false;
 
 	Point3d origin = ray.getOrigin();
 	dist = -((origin - point) * normal) / (ray.getDirection() * normal);
-	if (dist > 0)
-		return true;
 
-	return false;
+	if (dist > 0) 
+	{
+		return scal > 0 ? -1 : 1;
+	}
+
+	return 0;
 }
 
-bool InfinitePlan::computeColorNormal(const Ray& ray, double dist, MaterialPoint &caracteristics) {
+bool InfinitePlan::getPoint(const Ray& ray, double dist, MaterialPoint &caracteristics) {
 	caracteristics.color = color;
 	caracteristics.normal = normal / norm2(normal);
 	caracteristics.reflect = 0.7;

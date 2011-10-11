@@ -12,8 +12,8 @@ public:
 	InfinitePlan(const Vector3d &normal, const Point3d &Point);
 	~InfinitePlan(void);
 
-	bool intersect(const Ray &ray, double &dist);
-	bool computeColorNormal(const Ray& ray, double dist, MaterialPoint &caracteristics);
+	int intersect(const Ray &ray, double &dist);
+	bool getPoint(const Ray& ray, double dist, MaterialPoint &caracteristics);
 	bool setColor(Color3d &color);
 	bool setMaterial(const Material &material);
 
