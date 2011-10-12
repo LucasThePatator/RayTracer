@@ -14,15 +14,11 @@ public:
 
 	int intersect(const Ray &ray, double &dist);
 	bool getPoint(const Ray& ray, double dist, MaterialPoint &caracteristics);
-	bool setColor(Color3d &color);
-	bool setMaterial(const Material &material);
 
 private :
 
 	Point3d point;
 	Color3d color;
 	Vector3d normal;
-	Material material;
-	
 };
 

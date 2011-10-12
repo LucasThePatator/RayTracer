@@ -17,7 +17,7 @@ public:
 
 
 private :
-	void generateRay(int x, int y, Ray& ray) const;
+	void generateRay(double x, double y, Ray& ray) const;
 	void RayTrace(const Ray& ray, Color3d& color, unsigned int level) const;
 
 	SimpleScene *scene;

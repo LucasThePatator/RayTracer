@@ -7,6 +7,7 @@
 #include "InfinitePlan.h"
 #include "Ray.h"
 #include "RayTracer.h"
+#include "Material.h"
 
 #include "Light.h"
 
@@ -68,60 +69,71 @@ int _tmain(int argc, _TCHAR* argv[])
 	center1[2] = -.5;
 	double radius = 0.3;
 	Sphere s1(center1, radius);
+	Color3d reflect1(0.5);
 	Color3d color1(0);
 	color1[1] = 1;
-	s1.setColor(color1);
+	Material mat1(color1, reflect1, 0.5, 1.5, LARGE_DOUBLE);
+	s1.setMaterial(mat1);
 	scene.addPrimitive(s1);
 	
 	//Sphere rouge
 	Point3d center2;
-	center2[0] = 7 + 0.5;
+	center2[0] = 10 + 0.5;
 	center2[1] = 0;
 	center2[2] = 0.5;
 	Sphere s2(center2, 0.5);
 
 	Color3d color2(0);
+	Color3d reflect2(0.5);
 	color2[0] = 1;
-	s2.setColor(color2);
+	Material mat2(color2, reflect2, 0.5, 1.5, LARGE_DOUBLE);
+	s2.setMaterial(mat2);
 	scene.addPrimitive(s2);
 
 	//Sphere bleue
 	Point3d center3;
-	center3[0] = 5 + .5;
+	center3[0] = 4 + .5;
 	center3[1] = 0.7;
 	center3[2] = 0;
 	Sphere s3(center3, 0.25);
 
 	Color3d color3(0);
 	color3[2] = 1;
-	s3.setColor(color3);
+	Color3d reflect3(0);
+	Material mat3(color3, reflect3, 0.5, 1.5, LARGE_DOUBLE);
+	s3.setMaterial(mat3);
 	scene.addPrimitive(s3);
 
 	//Sphere blanche
 	Point3d center4;
-	center4[0] = 10;
-	center4[1] = 2;
-	center4[2] = 1.5;
-	Sphere s4(center4, 0.5);
+	center4[0] = 7;
+	center4[1] = -2;
+	center4[2] = 0;
+	
+	Sphere s4(center4, 0.2);
 
-	Color3d color4(1);
-	color4[2] = 1;
-	s4.setColor(color4);
+	Color3d color4(0);
+	Color3d reflect4(1);
+	color4[2] = 0;
+	Material mat4(color4, reflect4, 0, 1.5, 5);
+	s4.setMaterial(mat4);
 	scene.addPrimitive(s4);
 
 
 	////Plan blanc
-	//Vector3d normal1(0);
-	//normal1[0] = -1;
+	/*Vector3d normal1(0);
+	normal1[0] = -1;*/
 	Color3d white(1);
+	Color3d reflectPlan1(1);
+	Material matPlan1(white, reflectPlan1, 1, 1, 0); 
 	//Point3d pt1(0);
-	//pt1[0] = 10;
+	//pt1[0] = 20;
 	//pt1[1] = 0;
 	//pt1[2] = 0;
 
-	//InfinitePlan plan1(normal1, pt1);
-	//plan1.setColor(white);
-	//scene.addPrimitive(plan1);
+	/*InfinitePlan plan1(normal1, pt1);
+	plan1.setMaterial(matPlan1);*/
+	/*scene.addPrimitive(plan1);*/
 
 	Vector3d normal2(0);
 	normal2[2] = 1;
@@ -131,7 +143,7 @@ int _tmain(int argc, _TCHAR* argv[])
 	pt2[2] = -1;
 
 	InfinitePlan plan2(normal2, pt2);
-	plan2.setColor(white);
+	plan2.setMaterial(matPlan1);
 	scene.addPrimitive(plan2);
 	
 	Point3d origin;
@@ -143,7 +155,7 @@ int _tmain(int argc, _TCHAR* argv[])
 	Point3d lightPosition2(0);
 	Color3d lightColor(1);
 	
-	lightPosition1[0] = 12;
+	lightPosition1[0] = 3;
 	lightPosition1[1] = -3;
 	lightPosition1[2] = 5;
 

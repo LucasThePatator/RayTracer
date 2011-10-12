@@ -36,24 +36,15 @@ int InfinitePlan::intersect(const Ray &ray, double &dist)
 }
 
 bool InfinitePlan::getPoint(const Ray& ray, double dist, MaterialPoint &caracteristics) {
-	caracteristics.color = color;
+	caracteristics.color = material.getColor();
 	caracteristics.normal = normal / norm2(normal);
-	caracteristics.reflect = 0.7;
+	caracteristics.reflect = material.getReflect();
 
-	caracteristics.refractIndex = 1;
-	caracteristics.refractAbs = 0;
+	caracteristics.refractIndex = material.getRefractIndex();;
+	caracteristics.refractAbs = material.getRefractAbs();;
+
+	caracteristics.diffusion = material.getDiffusion();;
 
 	return true;
 }
 
-bool InfinitePlan::setColor(Color3d &color) 
-{
-	this->color = color;
-	return true;
-}
-
-bool InfinitePlan::setMaterial(const Material &material) 
-{
-	this->material = material;
-	return true;
-}

@@ -1,11 +1,11 @@
-﻿La génération a démarré 11/10/2011 02:05:00.
+﻿La génération a démarré 12/10/2011 04:59:08.
      1>Projet "C:\Users\Patator\documents\visual studio 2010\Projects\RayTracer\RayTracing\RayTracing.vcxproj" sur le nœud 2 (build cible(s)).
      1>InitializeBuildStatus:
-         Mise à jour de l'horodatage "Release\RayTracing.unsuccessfulbuild".
+         Création de "Release\RayTracing.unsuccessfulbuild", car "AlwaysCreate" a été spécifié.
        ClCompile:
          Toutes les sorties sont à jour.
-         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I"C:\Users\Patator\Documents\Geeking\SDL-1.2.14\include" /I"C:\Users\Patator\Documents\Geeking\MTL-4.0.8591-Linux\usr\include\boost\numeric\mtl" /I"C:\Users\Patator\documents\visual studio 2010\Projects\RayTracer\\BasicALgebra" /IC:\Users\Patator\Documents\Geeking\boost_1_47_0 /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"Release\RayTracing.pch" /Fo"Release\\" /Fd"Release\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt RayTracer.cpp
-         RayTracer.cpp
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I"C:\Users\Patator\Documents\Geeking\SDL-1.2.14\include" /I"C:\Users\Patator\Documents\Geeking\MTL-4.0.8591-Linux\usr\include\boost\numeric\mtl" /I"C:\Users\Patator\documents\visual studio 2010\Projects\RayTracer\\BasicALgebra" /IC:\Users\Patator\Documents\Geeking\boost_1_47_0 /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"Release\RayTracing.pch" /Fo"Release\\" /Fd"Release\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt RayTracing.cpp
+         RayTracing.cpp
        Link:
          c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Patator\documents\visual studio 2010\Projects\RayTracer\Release\RayTracing.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:"C:\Users\Patator\Documents\Geeking\SDL-1.2.14\lib" /LIBPATH:"C:\Users\Patator\documents\visual studio 2010\Projects\RayTracer\Release" SDL.lib SDLmain.lib BasicAlgebra.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Release\RayTracing.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\Patator\documents\visual studio 2010\Projects\RayTracer\Release\RayTracing.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Patator\documents\visual studio 2010\Projects\RayTracer\Release\RayTracing.lib" /MACHINE:X86 Release\camera.obj
          Release\InfinitePlan.obj
@@ -29,4 +29,4 @@
 
 La génération a réussi.
 
-Temps écoulé 00:00:00.67
+Temps écoulé 00:00:00.77

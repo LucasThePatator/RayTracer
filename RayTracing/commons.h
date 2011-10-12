@@ -2,6 +2,10 @@
 
 #define USE_BA
 
+#include <stdint.h>
+#define LARGE_DOUBLE std::numeric_limits<double>::max()
+#define EPSILON 1e-10
+
 #ifdef USE_UBLAS
 
 #include <boost/numeric/ublas/matrix.hpp>

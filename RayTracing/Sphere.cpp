@@ -35,20 +35,20 @@ int Sphere::intersect(const Ray &ray, double &dist) {
 		return 0;
 
 	//dans le cas ou l'un des deux est négatif, c'est que le rayon est parti de l'intérieur de la sphère, on prend toujours le plus petit positif
-	if (x1 < 0) {
+	if (x1 <= 0) {
 		dist = x2;
 		return -1;
 		
 	}
 
-	if (x2 < 0) {
+	if (x2 <= 0) {
 		dist = x1;
 		return -1;
 		
 	}
 
 	//Si les deux sont positifs
-	dist  = (x1 < x2 ? x1 : x2);
+	dist  = (x1 <= x2 ? x1 : x2);
 	return 1;
 }
 
@@ -59,23 +59,14 @@ bool Sphere::getPoint(const Ray& ray, double dist, MaterialPoint &caracteristics
 	caracteristics.normal = intersectionPoint - center;
 	caracteristics.normal = caracteristics.normal/norm2(caracteristics.normal);
 
-	caracteristics.color = this->color;
-	caracteristics.reflect = 1;
+	caracteristics.color = material.getColor();
+	caracteristics.reflect = material.getReflect();
 
-	caracteristics.refractIndex = 1.5;
-	caracteristics.refractAbs = 1;
+	caracteristics.refractIndex = material.getRefractIndex();
+	caracteristics.refractAbs = material.getRefractAbs();
 
-	return true;
-}
+	caracteristics.diffusion = material.getDiffusion();
 
-bool Sphere::setColor(Color3d &color) {
-	this->color = color;
-	return true;
-}
-
-bool Sphere::setMaterial(const Material &material) 
-{
-	this->material = material;
 	return true;
 }
 

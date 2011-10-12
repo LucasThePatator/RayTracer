@@ -18,6 +18,8 @@ typedef struct
 	/// Indice(s) d'absorption pour la refraction
 	double refractAbs;
 
+	double diffusion;
+
 } MaterialPoint;
 
 class Primitive
@@ -30,12 +32,10 @@ public:
 
 	virtual bool getPoint(const Ray& ray, double dist, MaterialPoint &caracteristics) = 0;
 
-	virtual bool setColor(Color3d &color) = 0;
-
 	void setMaterial(const Material &material) {this->material = material;};
 	const Material &getMaterial() const {return material;}
 
-private :
+protected:
 	Material material;
 };
 
